@@ -72,7 +72,7 @@ const Login = () => {
             <div className="mb-3 row">
                 <a
                     className="btn Login_LoginWithGoogleBtn"
-                    href="http://localhost:5000/api/auth/google/login"
+                    href="/api/auth/google/login"
                 >
                     <img src="/google.png" className="Login_GoogleIcon" />{" "}
                     {data.Login_with_google}
