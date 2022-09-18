@@ -19,10 +19,6 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-    res.send("hello world");
-});
-
 app.use(cors());
 
 // Session
@@ -44,6 +40,14 @@ app.use("/api/answer", require("./routes/answerRoutes"));
 app.use("/api/user", require("./routes/userRoutes"));
 app.use("/api/take", require("./routes/takeRoutes"));
 app.use("/api/takeAnswer", require("./routes/takeAnswerRoutes"));
+
+// Serve build folder
+if (process.env.NODE_ENV == "production") {
+    app.use(express.static(path.join(__dirname, "client", "build")));
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    });
+}
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
