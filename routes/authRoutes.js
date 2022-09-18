@@ -6,7 +6,6 @@ const GitHubStrategy = require("passport-github2").Strategy;
 const TwitterStrategy = require("passport-twitter").Strategy;
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
-const loggedIn = require("../middleware/loggedIn");
 require("dotenv").config();
 const router = express.Router();
 
@@ -63,7 +62,7 @@ passport.use(
         {
             clientID: process.env.GITHUB_CLIENT_ID,
             clientSecret: process.env.GITHUB_CLIENT_SECRET,
-            callbackURL: "http://localhost:5000/api/auth/github/callback",
+            callbackURL: "/api/auth/github/callback",
             scope: ["profile"],
         },
         async function (accessToken, refreshToken, profile, done) {
@@ -94,7 +93,7 @@ passport.use(
         {
             consumerKey: process.env.TWITTER_CLIENT_ID,
             consumerSecret: process.env.TWITTER_CLIENT_SECRET,
-            callbackURL: "http://localhost:5000/api/auth/twitter/callback",
+            callbackURL: "/api/auth/twitter/callback",
         },
         async function (token, tokenSecret, profile, cb) {
             console.log(profile);
@@ -147,8 +146,8 @@ router.get("/github/login", passport.authenticate("github"));
 router.get(
     "/github/callback",
     passport.authenticate("github", {
-        successRedirect: process.env.CLIENT_URL,
-        failureRedirect: `${process.env.CLIENT_URL}/login`,
+        successRedirect: "/",
+        failureRedirect: "/signin",
     })
 );
 
@@ -158,8 +157,8 @@ router.get("/google/login", passport.authenticate("google"));
 router.get(
     "/google/callback",
     passport.authenticate("google", {
-        successRedirect: process.env.CLIENT_URL,
-        failureRedirect: `${process.env.CLIENT_URL}/login`,
+        successRedirect: "/",
+        failureRedirect: "/signin",
     })
 );
 
@@ -169,8 +168,8 @@ router.get("/twitter/login", passport.authenticate("twitter"));
 router.get(
     "/twitter/callback",
     passport.authenticate("twitter", {
-        successRedirect: process.env.CLIENT_URL,
-        failureRedirect: `${process.env.CLIENT_URL}/login`,
+        successRedirect: "/",
+        failureRedirect: "/signin",
     })
 );
 
