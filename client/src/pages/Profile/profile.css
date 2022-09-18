@@ -1,0 +1,56 @@
+
+.darkBG{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Profile_ProfileWrapper{
+    width: 90vw;
+    height: 90vh;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Profile_NavTab{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Profile_NavTabButton{
+    width: 20%;
+
+}
+.Profile_Tab{
+    margin: 20px;
+}
+
+.Profile_ProfilePicture{
+    width: 30%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    margin: 5px;
+}
+
+.nav-link{
+    color:black
+}
+#changePassword{
+    display: none;
+}
+#history{
+    display: none;
+}

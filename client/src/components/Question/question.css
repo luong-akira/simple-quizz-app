@@ -1,0 +1,35 @@
+.Question_QuestionInput{
+    display: flex;
+}
+.Question_Form{
+    width: 100%;
+}
+
+.Question_Form *{
+    margin: 3px;
+}
+
+.Question_Question{
+    flex:7
+}
+.Question_FileInput{
+    display: none;
+    flex:5
+}
+.Question_EditButton{
+    flex:2
+}
+
+.Question_ImageWrapper{
+    border: none;
+}
+.Question_ImageIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.Question_PrewViewImage{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}

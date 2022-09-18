@@ -1,0 +1,24 @@
+/* .AdminPanel_Wrapper{
+    display: flex;
+}
+
+/* .AdminPanel_SidebarWrapper{
+    flex: 2;
+}
+
+.AdminPanel_ContentWrapper{
+    flex: 8;
+} */ 
+
+
+.AdminPanel_Tab{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    .AdminPanel_Tab{
+        width: 95%;
+    }
+}

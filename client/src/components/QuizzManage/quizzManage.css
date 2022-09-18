@@ -1,0 +1,26 @@
+.QuizzManage_PreviewWrapper{
+    position: relative;
+    width: 30%;
+}
+
+.QuizzManage_PreviewImage{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+.QuizzManage_ClosePreviewImageIcon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: red;
+    cursor: pointer;
+}
+
+.QuizzItem_Wrapper{
+    width: 30%;
+}
+.QuizzManage_QuizzPage{
+    display: flex;
+    justify-content: center;
+}
+

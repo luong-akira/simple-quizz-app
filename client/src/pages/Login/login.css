@@ -1,0 +1,56 @@
+.Login_Wrapper{
+    margin-top: 30px;
+    width: 30%;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 5px 0 rgba(43, 43, 43, .1), 0 11px 6px -7px rgba(43, 43, 43, .1);
+    box-shadow: 0 0 5px 0 rgba(43, 43, 43, .1), 0 11px 6px -7px rgba(43, 43, 43, .1);
+}
+
+.Login_Label{
+    padding: 0;
+}
+
+.Login_Heading{
+    text-align: center;
+}
+
+.Login_LoginBtn{
+    width: 70%;
+    padding: 10px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Login_GoogleIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.Login_LoginWithGoogleBtn{
+    width: 70%;
+    padding: 10px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: black;
+    -webkit-box-shadow: 0 0 5px 0 rgba(43, 43, 43, .1), 0 11px 6px -7px rgba(43, 43, 43, .1);
+    box-shadow: 0 0 5px 0 rgba(43, 43, 43, .1), 0 11px 6px -7px rgba(43, 43, 43, .1);
+}
+
+@media only screen and (max-width: 600px) {
+    .Login_Wrapper{
+        margin-top: 30px;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .Login_LoginBtn{
+        width: 100%;
+    }
+    .Login_LoginWithGoogleBtn{
+        width: 100%;
+    }
+}
